@@ -9,7 +9,8 @@ template<class T>
 void printPriorityQueue(priority_queue<T>& pque);
 template<class T>
 void traversalPriorityQueue(priority_queue<T>& pque);
-void printSet(set<int> & s);
+template<typename T>
+void printSet(set<T> & s);
 
 int main(){
     //define a pque
@@ -77,11 +78,12 @@ void traversalPriorityQueue(priority_queue<T>& pque)
     }
     cout<<endl;
 }
-
-void printSet(set<int> & s)
+template<typename T>
+void printSet(set<T> & s)
 {
-    for (set<int>::iterator ite = s.begin(); ite != s.end() ; ++ite )
+    for (typename  set<T>::iterator ite = s.begin(); ite != s.end() ; ++ite )
     {
-        cout<< *ite <<endl;
+        cout<< *ite <<"\t";
     }
+    cout<<endl;
 }
